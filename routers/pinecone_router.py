@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 router = APIRouter()
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
-pc = Pinecone(api_key="pcsk_4SKbBF_SRL1nL1QRxU55RwuLvYjkJTWuj9kM324tYwUYQg5KVU9fhRQqfUpraHwquvR4Pp")
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 INDEX_NAME = "doc"  
 print(pc.list_indexes().names())
 try:
