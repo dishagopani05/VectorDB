@@ -1,2 +1,3 @@
 "venv/"   # Ignore venv if using virtual environment
 "venv/" 
+.env
